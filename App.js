@@ -11,14 +11,14 @@ class App extends Component {
     super(props);
     this.state = {
       feed: [
-        {id: '1', nome: 'Abacaxi', Valor: '4.50', Qtdade: 10, desconto: '5', Marca: 'Pérola' , Ref: '001' , promocao: '3 pg 2'},
-        {id: '2', nome: 'Arroz', Valor: 27.00, Qtdade: 30, desconto: '5', Marca: 'Vasconcelos' , Ref: '002' , promocao: '3 pg 2' },
-        {id: '3', nome: 'Feijão', Valor: 6.97, Qtdade: 50, desconto: '5', Marca: 'Vasconcelos' , Ref: '003' , promocao: '3 pg 2' },
-        {id: '4', nome: 'Laranja', Valor: 3.50, Qtdade: 90, desconto: '5', Marca: 'Pêra' , Ref: '004' , promocao: '3 pg 2' },
-        {id: '5', nome: 'Café', Valor: 10.00, Qtdade: 80, desconto: '5', Marca: 'Três Corações' , Ref: '005' , promocao: '3 pg 2' },
-        {id: '6', nome: 'Óleo', Valor: 8.00, Qtdade: 60, desconto: '5', Marca: 'Sóia' , Ref: '006' , promocao: '3 pg 2' },
-        {id: '7', nome: 'Açucar', Valor: 10.90, Qtdade: 70, desconto: '5', Marca: 'Delta' , Ref: '007' , promocao: '3 pg 2' },
-        {id: '8', nome: 'Macarrão', Valor: 3.80, Qtdade: 120, desconto: '5', Marca: 'Vilma' , Ref: '008' , promocao: '3 pg 2' },
+        {id: '1', nome: 'Abacaxi', valor: '4.50', qtde: 10, desconto: '5', marca: 'Pérola' , reef: '001' , promocao: '3 pg 2'},
+        {id: '2', nome: 'Arroz', valor: '27.00', qtde: 30, desconto: '5', marca: 'Vasconcelos' , reef: '002' , promocao: '3 pg 2' },
+        {id: '3', nome: 'Feijão', valor: '6.97', qtde: 50, desconto: '5', marca: 'Vasconcelos' , reef: '003' , promocao: '3 pg 2' },
+        {id: '4', nome: 'Laranja', valor: '3.50', qtde: 90, desconto: '5', marca: 'Pêra' , reef: '004' , promocao: '3 pg 2' },
+        {id: '5', nome: 'Café', valor: '10.00', qtde: 80, desconto: '5', marca: 'Três Corações' , reef: '005' , promocao: '3 pg 2' },
+        {id: '6', nome: 'Óleo', valor: '8.00', qtde: 60, desconto: '5', marca: 'Sóia' , reef: '006' , promocao: '3 pg 2' },
+        {id: '7', nome: 'Açucar', valor: '10.90', qtde: 70, desconto: '5', marca: 'Delta' , reef: '007' , promocao: '3 pg 2' },
+        {id: '8', nome: 'Macarrão', valor: '3.80', qtde: 120, desconto: '5', marca: 'Vilma' , reef: '008' , promocao: '3 pg 2' },
       ],
     };
   }
@@ -42,10 +42,11 @@ class App extends Component {
               renderItem={({item}) => (              
               <Produto 
                 nome={item.nome}
-                Qtdade={item.Qtdade}
+                valor={item.valor}
+                qtde={item.qtde}
                 desconto={item.desconto}
-                Marca={item.Marca}
-                Ref={item.Ref}
+                marca={item.marca}
+                reef={item.reef}
                 promocao={item.promocao}/>
               )}
             />          
